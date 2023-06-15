@@ -31,7 +31,7 @@ public class TaskController {
         return taskRepository.save(task);
     }
 
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     public Task updateTask(@PathVariable String id, @RequestBody Task task) {
         task.setId(id);
         return taskRepository.save(task);

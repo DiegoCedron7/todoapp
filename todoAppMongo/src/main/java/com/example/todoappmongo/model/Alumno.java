@@ -5,15 +5,18 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-@Document(collection = "tasks")
-@Data //Use to create automated getters & setters
-public class Task {
+@Document(collection = "alumnos")
+@Data
+public class Alumno {
     @Id
     private String id;
+    @Field("nombre")
+    private String nombre;
 
-    @Field("title")
-    private String title;
-
-    @Field("completed")
-    private boolean completed;
+    @Field("apellido")
+    private String apellido;
+    @Field("edad")
+    private int edad;
+    @Field("direccion")
+    private String direccion;
 }
